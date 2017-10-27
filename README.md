@@ -1,6 +1,6 @@
 # WeatherPrediction
 
-This was a group project, where we applied k-means algorithm across 3 different platforms (Mahout, Weka and Spark) on 200MB aggregated dataset to compare their performance. I worked on k-means algorithm performance on Spark platform. Attached is the code and report.
+This was a group project, where we applied k-means algorithm across 3 different platforms (Mahout, Weka and Spark) on 200MB aggregated dataset to compare their performance. I worked on k-means algorithm performance on Spark platform. Attached is the code and report. As you can see below, the code takes in each column from input as features to K-means cluster algorithm and then I added Cluster column to the same input with cluster number that each record is associated to. In this case, K=10, so 10 total clusters.
 
 Sample Dataset (input) looks like the following:
 
@@ -29,7 +29,7 @@ YEAR_MONTH_LAT_LONG,AVG_TEMP,C_YEAR,C_Month,C_LATITUDE,C_LONGITUDE,YEAR,MONTH,LA
 201201_01_+00030_+089850,282,2012,01,+00030,+089850,2012,1,30,89850
 201201_01_+00030_-009870,254,2012,01,+00030,-009870,2012,1,30,-9870
 
-Output:
+Output of kmeans_clustering.py:
 
 CLUSTER
 0
@@ -54,6 +54,8 @@ CLUSTER
 6
 1
 9
+
+Output of merge2csv.py:
 
 YEAR_MONTH_LAT_LONG,AVG_TEMP,YEAR,MONTH,LATITUDE,LONGITUDE,CLUSTER
 201201_01_+00000_+000010,264,2012,1,0,10,0
